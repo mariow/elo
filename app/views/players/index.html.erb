@@ -22,7 +22,7 @@
           <% end %>
         </td>
         <td class="rank singles"><%= number_with_delimiter(player.rank) %> / <%= number_with_delimiter(player.doubles_rank) %></td>
-        <td class="actions hide-on-phones"><%= link_to 'Delete', player_path(player), :method => :delete, :confirm => "Delete #{player.display_name}?" %></td>
+        <td class="actions hide-on-phones"><%= link_to 'Delete', player_path(player), :method => :delete, :confirm => "Delete #{ player.name }?" %></td>
       </tr>
     <% end -%>
   </tbody>

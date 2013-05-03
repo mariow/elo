@@ -11,7 +11,7 @@
 </script>
 <% end -%>
 <h2 class="player">
-  <%= @player.display_name %>
+  <%= @player.name %>
 </h2>
 <%= image_tag(gravatar_url_for(@player.email, :size => 100)) %>
 <div id="rank_graph">
@@ -25,7 +25,7 @@
   points than the spread predicted, your score will go up.</p>
 <ul>
 <% other_players.each do |player| -%>
-<li><%= link_to player.display_name, player %>(<%= player.rank %>): <%= @player.margin(player) %></li>
+<li><%= link_to player.name, player %>(<%= player.rank %>): <%= @player.margin(player) %></li>
 <% end -%>
 </ul>
 

@@ -30,11 +30,16 @@ class Player < ActiveRecord::Base
   end
   
   def display_name
-    name.blank? ? email : name.gsub(/ (.*)$/) { " " + $&.split(//)[1] + "." }
+    #name.blank? ? email : name.gsub(/ (.*)$/) { " " + $&.split(//)[1] + "." }
+    name.blank? ? email : name
   end
 
   def self.by_rank
     order('rank desc')
+  end
+
+  def self.by_doubles_rank
+    order('doubles_rank desc')
   end
 
   def score_history
