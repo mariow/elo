@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   helper_method :active_league
   before_filter :load_players
   before_filter :authorize_by_ip
-  WHITELIST = ['46.244.213.211', '212.114.195.242'].freeze
+  WHITELIST = ['46.244.213.211', '212.114.195.242', '83.243.114.5'].freeze
 
   private
 
