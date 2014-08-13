@@ -36,7 +36,7 @@ class PlayersController < InheritedResources::Base
   end
 
   def recent_games
-    (Game.all).sort_by(&:created_at).reverse
+    (Game.all).sort_by(&:created_at).reverse.take(20)
   end
 
   def other_players
